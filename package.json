@@ -4,7 +4,7 @@
   "description": "bridge between Slack and Facebook Messenger",
   "main": "run.js",
   "scripts": {
-    "run": "node run.js"
+    "start": "node run.js"
   },
   "repository": {
     "type": "git",
