@@ -17,3 +17,13 @@ login({email: process.env['FB_EMAIL'], password: process.env['FB_PASSWORD']}, fu
         api.sendMessage('[' + message.senderName + '] ' + message.body, process.env['FAZ_ID']);
     });
 });
+
+
+
+var http = require('http');
+var url = require('url');
+
+http.createServer(function (req, res) {
+	var suffix = url.parse(req.url).pathname.substring(1);
+	res.end("Hello " + suffix);
+}).listen(process.env.PORT || 5000);
